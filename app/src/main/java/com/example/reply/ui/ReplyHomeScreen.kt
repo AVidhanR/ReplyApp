@@ -74,6 +74,12 @@ fun ReplyHomeScreen(
             navigationItemContentList = navigationItemContentList,
             modifier = modifier
         )
+    } else {
+        ReplyDetailsScreen(
+            replyUiState = replyUiState,
+            onBackPressed =  onDetailScreenBackPressed,
+            modifier = modifier
+        )
     }
 }
 
@@ -102,7 +108,8 @@ private fun ReplyAppContent(
             ReplyListOnlyContent(
                 replyUiState = replyUiState,
                 onEmailCardPressed = onEmailCardPressed,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier
+                    .weight(1f)
                     .padding(
                         horizontal = dimensionResource(R.dimen.email_list_only_horizontal_padding)
                     )
