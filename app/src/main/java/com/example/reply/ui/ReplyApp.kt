@@ -29,7 +29,6 @@ fun ReplyApp(
             ReplyNavigationType.BOTTOM_NAVIGATION
         }
     }
-
     ReplyHomeScreen(
         replyUiState = replyUiState,
         onTabPressed = { mailboxType: MailboxType ->
