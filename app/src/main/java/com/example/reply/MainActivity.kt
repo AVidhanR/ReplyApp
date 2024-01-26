@@ -31,14 +31,34 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+//Preview for Compact Screens
 @Preview(showBackground = true)
 @Composable
 fun ReplyAppCompactPreview() {
     ReplyTheme {
         Surface {
-            ReplyApp(
-                windowSize = WindowWidthSizeClass.Compact
-            )
+            ReplyApp( windowSize = WindowWidthSizeClass.Compact )
+        }
+    }
+}
+
+//Preview for Medium Screens
+@Preview (showBackground = true, widthDp = 700)
+@Composable
+fun ReplyAppMediumPreview() {
+    ReplyTheme {}
+    Surface {
+        ReplyApp( windowSize = WindowWidthSizeClass.Medium )
+    }
+}
+
+//Preview for Expanded Screens
+@Preview(showBackground = true, widthDp = 1000)
+@Composable
+fun ReplyAppExpandedPreview() {
+    ReplyTheme {
+        Surface {
+            ReplyApp( windowSize = WindowWidthSizeClass.Expanded )
         }
     }
 }
